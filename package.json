@@ -1,0 +1,34 @@
+{
+  "name": "is_a_ts",
+  "version": "0.2.0",
+  "description": "Typescript implementation of is_a/2, inherited from Ram Lottem's work",
+  "main": "dist/index.cjs.min.js",
+  "scripts": {
+    "typescript": "tsc --build tsconfig.json",
+    "clean": "rimraf -f build && mkdir build && cd build && mkdir typescript && mkdir rollup && mkdir terser && cd ../src/ts && rimraf -f generated_code && mkdir generated_code && cd ../..",
+    "build": "npm run clean && npm run typescript",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoneCypher/is_a_ts.git"
+  },
+  "keywords": [
+    "is_a",
+    "type",
+    "guard",
+    "typescript",
+    "ts",
+    "stonecypher"
+  ],
+  "author": "John Haugeland <stonecypher@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StoneCypher/is_a_ts/issues"
+  },
+  "homepage": "https://github.com/StoneCypher/is_a_ts#readme",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  }
+}
