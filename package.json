@@ -1,14 +1,20 @@
 {
   "name": "is_a_ts",
-  "version": "0.5.0",
-  "description": "Typescript implementation of is_a/2, inherited from Ram Lottem's work",
+  "version": "0.6.0",
+  "description": "Typescript implementation of is_a/2 dynamic typeguard by Krumpet, productionalized by StoneCypher",
   "main": "dist/index.cjs.min.js",
+  "module": "dist/index.esm.min.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "version": "node ./src/build_js/write_version_file.js",
     "typescript": "tsc --build tsconfig.json",
+    "terser_cjs": "terser --comments false -c passes=2 -m --sequences 40 build/rollup/index.cjs.js -o build/terser/index.cjs.min.js",
+    "terser_esm": "terser --comments false -c passes=2 --sequences 40 build/rollup/index.esm.js -o build/terser/index.esm.min.js",
+    "terser": "npm run terser_cjs && npm run terser_esm",
     "rollup": "rollup -c",
     "clean": "rimraf -f build && mkdir build && cd build && mkdir typescript && mkdir rollup && mkdir terser && cd ../src/ts && rimraf -f generated_code && mkdir generated_code && cd ../..",
-    "build": "npm run clean && npm run version && npm run typescript && npm run rollup",
+    "dist": "rimraf -f dist && mkdir dist && cp ./build/terser/index.cjs.min.js ./dist && cp ./build/terser/index.esm.min.js ./dist && cp ./build/typescript/index.d.ts ./dist",
+    "build": "npm run clean && npm run version && npm run typescript && npm run rollup && npm run terser && npm run dist",
     "test": "jest"
   },
   "repository": {
@@ -34,6 +40,7 @@
     "@rollup/plugin-node-resolve": "^13.0.3",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.3",
+    "terser": "^5.7.1",
     "typescript": "^4.3.5"
   }
 }
