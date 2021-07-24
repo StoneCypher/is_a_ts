@@ -1,4 +1,23 @@
 
-import { version, built, packagename } from './generated_code/package_version'
+import {
+  version,
+  built,
+  packagename
+} from './generated_code/package_version'
 
-export { version, built, packagename };
+
+import {
+  typeMap,
+  PrimitiveOrConstructor,
+  GuardedType,
+  typeGuard
+} from './is_a';
+
+
+
+
+
+export {
+  version, built, packagename,
+  typeMap, PrimitiveOrConstructor, GuardedType, typeGuard
+};
