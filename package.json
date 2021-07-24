@@ -1,6 +1,6 @@
 {
   "name": "is_a_ts",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Typescript implementation of is_a/2 dynamic typeguard by Krumpet, productionalized by StoneCypher",
   "main": "dist/index.cjs.min.js",
   "module": "dist/index.esm.min.js",
@@ -16,7 +16,8 @@
     "clean": "rimraf -f docs && mkdir docs && rimraf -f build && mkdir build && cd build && mkdir typescript && mkdir rollup && mkdir terser && cd ../src/ts && rimraf -f generated_code && mkdir generated_code && cd ../..",
     "dist": "rimraf -f dist && mkdir dist && cp ./build/terser/index.cjs.min.js ./dist && cp ./build/terser/index.esm.min.js ./dist && cp ./build/typescript/index.d.ts ./dist",
     "site": "cp -r ./src/html/* ./docs && cp ./src/html/.nojekyll ./docs",
-    "build": "npm run clean && npm run version && npm run typescript && npm run rollup && npm run terser && npm run dist && npm run docs && npm run site",
+    "changelog": "auto-changelog --hide-credit --commit-limit false --unreleased",
+    "build": "npm run clean && npm run version && npm run typescript && npm run rollup && npm run terser && npm run dist && npm run docs && npm run site && npm run changelog",
     "test": "jest"
   },
   "repository": {
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.1",
     "@rollup/plugin-node-resolve": "^13.0.3",
+    "auto-changelog": "^2.3.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.3",
     "terser": "^5.7.1",
