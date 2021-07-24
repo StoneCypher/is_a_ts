@@ -1,12 +1,13 @@
 {
   "name": "is_a_ts",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Typescript implementation of is_a/2, inherited from Ram Lottem's work",
   "main": "dist/index.cjs.min.js",
   "scripts": {
     "typescript": "tsc --build tsconfig.json",
+    "rollup": "rollup -c",
     "clean": "rimraf -f build && mkdir build && cd build && mkdir typescript && mkdir rollup && mkdir terser && cd ../src/ts && rimraf -f generated_code && mkdir generated_code && cd ../..",
-    "build": "npm run clean && npm run typescript",
+    "build": "npm run clean && npm run typescript && npm run rollup",
     "test": "jest"
   },
   "repository": {
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/StoneCypher/is_a_ts#readme",
   "devDependencies": {
     "rimraf": "^3.0.2",
+    "rollup": "^2.53.3",
     "typescript": "^4.3.5"
   }
 }
