@@ -2,14 +2,39 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.9.1...HEAD)
+#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.10.3...HEAD)
+
+#### [v0.10.3](https://github.com/StoneCypher/is_a_ts/compare/v0.10.2...v0.10.3)
+
+> 25 July 2021
+
+- Coveralls [`e3d482f`](https://github.com/StoneCypher/is_a_ts/commit/e3d482f495a292037b98375bd571eee6573ae73a)
+
+#### [v0.10.2](https://github.com/StoneCypher/is_a_ts/compare/v0.10.1...v0.10.2)
+
+> 25 July 2021
 
 - Add CI, fixes #30 [`#30`](https://github.com/StoneCypher/is_a_ts/issues/30)
+
+#### [v0.10.1](https://github.com/StoneCypher/is_a_ts/compare/v0.10.0...v0.10.1)
+
+> 25 July 2021
+
 - 100% spec coverage, fixes #33 [`#33`](https://github.com/StoneCypher/is_a_ts/issues/33)
-- Add authors file, fixes #2; downgrade self to contributor, fixes #32; add krumpet to keywords, fixes #4 [`#2`](https://github.com/StoneCypher/is_a_ts/issues/2) [`#32`](https://github.com/StoneCypher/is_a_ts/issues/32) [`#4`](https://github.com/StoneCypher/is_a_ts/issues/4)
-- working jest [`d647648`](https://github.com/StoneCypher/is_a_ts/commit/d6476485b8eb88063592ec7c9c939313699f5fcd)
 - blog claims achieve 100/100/40/100% coverage [`09fd5d6`](https://github.com/StoneCypher/is_a_ts/commit/09fd5d62bc17ff6951270d09f79691f5819ca374)
+
+#### [v0.10.0](https://github.com/StoneCypher/is_a_ts/compare/v0.9.2...v0.10.0)
+
+> 25 July 2021
+
+- working jest [`d647648`](https://github.com/StoneCypher/is_a_ts/commit/d6476485b8eb88063592ec7c9c939313699f5fcd)
 - Update README.md [`e26e182`](https://github.com/StoneCypher/is_a_ts/commit/e26e1829211b3cbaf02bd246e1a86e09d5c2c947)
+
+#### [v0.9.2](https://github.com/StoneCypher/is_a_ts/compare/v0.9.1...v0.9.2)
+
+> 25 July 2021
+
+- Add authors file, fixes #2; downgrade self to contributor, fixes #32; add krumpet to keywords, fixes #4 [`#2`](https://github.com/StoneCypher/is_a_ts/issues/2) [`#32`](https://github.com/StoneCypher/is_a_ts/issues/32) [`#4`](https://github.com/StoneCypher/is_a_ts/issues/4)
 
 #### [v0.9.1](https://github.com/StoneCypher/is_a_ts/compare/v0.9.0...v0.9.1)
 

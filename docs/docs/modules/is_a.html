@@ -86,6 +86,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="is_a.html#typeGuard" class="tsd-kind-icon">type<wbr>Guard</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="is_a.html#z_tutorial" class="tsd-kind-icon">z_<wbr>tutorial</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,7 +100,7 @@
 					<div class="tsd-signature tsd-kind-icon">Guarded<wbr>Type&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a><span class="tsd-signature-symbol"> ? </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/bb884c8/src/ts/is_a.ts#L21">is_a.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/e3d482f/src/ts/is_a.ts#L21">is_a.ts:21</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -115,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">Primitive<wbr>OrConstructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/bb884c8/src/ts/is_a.ts#L12">is_a.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/e3d482f/src/ts/is_a.ts#L12">is_a.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -132,7 +133,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/bb884c8/src/ts/is_a.ts#L33">is_a.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/e3d482f/src/ts/is_a.ts#L33">is_a.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -151,6 +152,298 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">o</span><span class="tsd-signature-symbol"> is </span><a href="is_a.html#GuardedType" class="tsd-signature-type" data-tsd-kind="Type alias">GuardedType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="z_tutorial" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> z_<wbr>tutorial</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">z_<wbr>tutorial<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/e3d482f/src/ts/is_a.ts#L452">is_a.ts:452</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<a href="#generic-type-guard-in-typescript" id="generic-type-guard-in-typescript" style="color: inherit; text-decoration: none;">
+										<h1>Generic type guard in Typescript</h1>
+									</a>
+								</div>
+								<p><code>#typescript</code> <code>#javascript</code> <code>#typeguards</code> <code>#generictypes</code></p>
+								<p><cite>Ran Lottem</cite> ・ Apr 7, 2019 ・ 10 min read</p>
+								<p><a href="https://dev.to/krumpet/generic-type-guard-in-typescript-258l">Copy of this original tutorial</a></p>
+								<p><br/><br/></p>
+								<h3>Writing a generic type guard in Typescript, and what I learned from it</h3>
+								<ul>
+									<li><a href="#introduction">Introduction</a><ul>
+											<li>Introducing the Constructor type signature</li>
+											<li>Extending the type guard to work for primitive types</li>
+										</ul>
+									</li>
+									<li>Putting it all together</li>
+									<li>In summary<ul>
+											<li>Sources</li>
+											<li>Addendum</li>
+										</ul>
+									</li>
+								</ul>
+								<p><br/><br/></p>
+								<h1 id="introduction">Introduction</h1>
+								<p>I recently had a problem at work which stemmed from a function assuming its
+									input is of one type, while in fact it sometimes could be of a different
+								type.</p>
+								<p>My initial attempt to fix the problem was to determine what types the input
+									could have, and to fix the function declaration so that the input&#39;s type is
+									the union of all possible types, and to then use type guards within the
+								function. Something like taking this function:</p>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">myFunc</span><span style="color: #000000">(</span><span style="color: #001080">a</span><span style="color: #000000">: </span><span style="color: #267F99">TypeA</span><span style="color: #000000">[]): </span><span style="color: #267F99">void</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>and refactoring it into:</p>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">myFunc</span><span style="color: #000000">(</span><span style="color: #001080">a</span><span style="color: #000000">: </span><span style="color: #267F99">TypeA</span><span style="color: #000000">[] | </span><span style="color: #267F99">TypeB</span><span style="color: #000000">[]): </span><span style="color: #267F99">void</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">a</span><span style="color: #000000">.</span><span style="color: #795E26">every</span><span style="color: #000000">(</span><span style="color: #001080">e</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">e</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">TypeA</span><span style="color: #000000">)) {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">  } </span><span style="color: #AF00DB">else</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>This made me want to write a generic version of a type guard. Then using it
+								in an array would be as simple as:</p>
+								<pre><code class="language-typescript"><span style="color: #001080">a</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">Array</span><span style="color: #000000"> &amp;&amp; </span><span style="color: #001080">a</span><span style="color: #000000">.</span><span style="color: #795E26">every</span><span style="color: #000000">(</span><span style="color: #001080">typeGuard</span><span style="color: #000000">&lt;</span><span style="color: #0070C1">T</span><span style="color: #000000">&gt;)</span><span style="color: #A31515">`</span>
+</code></pre>
+								<p>But what is this <code>typeGuard&lt;T&gt;</code>? Well, I already wrote a type guard for some
+									<code>TypeA</code> in the example above, so a generic type guard could simply wrap a
+									call to instanceof. We will see a less trivial implementation later. For
+								now, we have:</p>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeGuard</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt;(</span><span style="color: #001080">o</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">): </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">is</span><span style="color: #000000"> </span><span style="color: #267F99">T</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">T</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>This gives us an error, however: <code>T</code> only refers to a type, but is being used as a value here.</p>
+								<p>The issue here is that the type <code>T</code> is not always available at runtime, since it could be an interface - a construct that is not accessible to the underlying JavaScript. This means that writing a generic type guard to discern between interfaces wouldn&#39;t have worked - though one could write non-generic type guards for specific interfaces. This does work for classes, however:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">myClass</span><span style="color: #000000"> {}</span>
+
+<span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">classTypeGuard</span><span style="color: #000000">(</span><span style="color: #001080">object</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">): </span><span style="color: #267F99">boolean</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">object</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">myClass</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>Even if we weren&#39;t trying to be generic over <code>T</code>, we would get the same error - the bit of code e instanceof <code>TypeA</code> above gives the same error about <code>TypeA</code> only referring to a type.</p>
+								<p>How, then, can we pass the function the type we want to check object is an instance of? For a class like myClass above, we would want to pass myClass itself to the function, like so:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #001080">o</span><span style="color: #000000">, </span><span style="color: #001080">className</span><span style="color: #000000">) {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">className</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myClassObject</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">myClass</span><span style="color: #000000">();</span>
+
+<span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #001080">myClassObject</span><span style="color: #000000">, </span><span style="color: #001080">myClass</span><span style="color: #000000">); </span><span style="color: #008000">// returns true</span>
+</code></pre>
+								<p><br/><br/></p>
+								<h2 id="constructor">Introducing the Constructor type signature</h2>
+								<p>The above works, but we haven&#39;t specified any type restrictions on the className variable. A line like <code>typeGuard(myClassObject, 5)</code> raises no errors, but would cause a runtime <code>TypeError: Right-hand side of &#39;instanceof&#39; is not an object</code>. We need to add a restriction on <code>className</code>&#39;s type such that only <code>object</code>s that can be on the right side of <code>instanceof</code> can be used. This restriction stems from the definition of <code>instanceof</code> in JavaScript, where the <code>object</code> needs to be a <code>constructor</code> for some type. We can do this by specifying <code>className</code>&#39;s type like so:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">Constructor</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt; = { </span><span style="color: #0000FF">new</span><span style="color: #000000"> (...</span><span style="color: #001080">args</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">[]): </span><span style="color: #267F99">T</span><span style="color: #000000"> };</span>
+
+<span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeGuard</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt;(</span><span style="color: #001080">o</span><span style="color: #000000">, </span><span style="color: #001080">className</span><span style="color: #000000">: </span><span style="color: #267F99">Constructor</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt;): </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">is</span><span style="color: #000000"> </span><span style="color: #267F99">T</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">className</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myClassObject</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">myClass</span><span style="color: #000000">();</span>
+
+<span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #001080">myClassObject</span><span style="color: #000000">, </span><span style="color: #001080">myClass</span><span style="color: #000000">); </span><span style="color: #008000">// returns true</span>
+
+<span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #001080">myClassObject</span><span style="color: #000000">, </span><span style="color: #098658">5</span><span style="color: #000000">); </span><span style="color: #008000">// Argument of type &#039;5&#039; is not assignable to parameter of type &#039;Constructor&lt;{}&gt;&#039;</span>
+</code></pre>
+								<p>Let&#39;s unpack some of what we see here: we declare a new type - <code>Constructor&lt;T&gt;</code> is a type that has a method new that takes any number of arguments (including zero) and returns an instance of type <code>T</code>. This is exactly the restriction we need to be able to use <code>className</code> with <code>instanceof</code>.</p>
+								<p><br/><br/></p>
+								<h2 id="extending">Extending the type guard to work for primitive types</h2>
+								<p>So far, all we&#39;ve really done is wrap instanceof with another function, albeit with fancy-looking typing. We&#39;d also like to be able to do something like this:</p>
+								<pre><code class="language-typescript"><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;number&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// true</span>
+<span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;abc&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;number&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// false</span>
+</code></pre>
+								<p>What we need to do here is widen the type of the <code>myClass</code> parameter we&#39;re using, to something like this: <code>type PrimitiveOrConstructor&lt;T&gt; = Constructor&lt;T&gt; | &#39;string&#39; | &#39;number&#39; | &#39;boolean&#39;</code>.</p>
+								<p>Let&#39;s try and use this new type:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt; =</span>
+<span style="color: #000000">  | </span><span style="color: #267F99">Constructor</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt;</span>
+<span style="color: #000000">  | </span><span style="color: #A31515">&#039;string&#039;</span>
+<span style="color: #000000">  | </span><span style="color: #A31515">&#039;number&#039;</span>
+<span style="color: #000000">  | </span><span style="color: #A31515">&#039;boolean&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeGuard</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt;(</span><span style="color: #001080">o</span><span style="color: #000000">, </span><span style="color: #001080">className</span><span style="color: #000000">: </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt;): </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">is</span><span style="color: #000000"> </span><span style="color: #267F99">T</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">className</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> === </span><span style="color: #001080">className</span><span style="color: #000000">;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">className</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">A</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">a</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;a&#039;</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">B</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">A</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">b</span><span style="color: #000000">: </span><span style="color: #267F99">number</span><span style="color: #000000"> = </span><span style="color: #098658">3</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;number&#039;</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;is true&#039;</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;is false&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">A</span><span style="color: #000000">(), </span><span style="color: #0070C1">A</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;is true&#039;</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">A</span><span style="color: #000000">(), </span><span style="color: #0070C1">B</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;is false&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">B</span><span style="color: #000000">(), </span><span style="color: #0070C1">A</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;is true&#039;</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">B</span><span style="color: #000000">(), </span><span style="color: #0070C1">B</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;is true&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">B</span><span style="color: #000000">(), </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;is false&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+								<p>Let&#39;s examine the new implementation of <code>typeGuard</code>: <code>className</code> is now either a <code>Constructor&lt;T&gt;</code> or it&#39;s a <code>string</code> whose value is limited to one of <code>&#39;string&#39;</code>, <code>&#39;number&#39;</code>, or <code>&#39;boolean&#39;</code>. In case it&#39;s a string (technically, if its type is <code>&#39;string&#39; | &#39;number&#39; | &#39;boolean&#39;</code>), then <code>typeof className === &#39;string&#39;</code> will be <code>true</code>, and then the type guard will be based on <code>typeof</code> rather than <code>instanceof</code>. Notice that the if checks <code>className</code>&#39;s type (<code>&#39;function&#39;</code> in the case of a <code>Constructor&lt;T&gt;</code> vs. <code>&#39;string&#39;</code> in the rest of the cases), and the type guard itself is comparing type of the object we want to guard, with the actual value of <code>className</code>.</p>
+								<p>Something is still amiss, though. The return type for <code>typeGuard</code> is wrong in the case where we&#39;re checking if an <code>object</code> has a primitive type. Notice that <code>typeGuard</code>&#39;s return type is <code>o is T</code>. this <code>T</code> comes from <code>Constructor&lt;T&gt;</code> if that&#39;s <code>className</code>&#39;s type, but if it isn&#39;t then <code>T</code> is resolved as <code>{}</code>, meaning that for primitive types, our type guard is wrong:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeDependent</span><span style="color: #000000">(</span><span style="color: #001080">o</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">) {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #001080">o</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;number&#039;</span><span style="color: #000000">)) {</span>
+<span style="color: #000000">    </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">o</span><span style="color: #000000"> + </span><span style="color: #098658">5</span><span style="color: #000000">); </span><span style="color: #008000">// Error: Operator &#039;+&#039; cannot be applied to types &#039;{}&#039; and &#039;5&#039;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>We could correct this by letting the compiler know what <code>T</code> is manually, like so:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeDependent</span><span style="color: #000000">(</span><span style="color: #001080">o</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">) {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">&lt;</span><span style="color: #267F99">number</span><span style="color: #000000">&gt;(</span><span style="color: #001080">o</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;number&#039;</span><span style="color: #000000">)) {</span>
+<span style="color: #000000">    </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">o</span><span style="color: #000000"> + </span><span style="color: #098658">5</span><span style="color: #000000">); </span><span style="color: #008000">// o is number, no error</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>But we&#39;d like for typeGuard&#39;s return type to be inferred from the value of <code>className</code>. We need to use the type <code>PrimitiveOrConstructor&lt;T&gt;</code> to guard <code>T | string | number | boolean</code>. First, the type <code>T</code> should be inferred only if the type we&#39;re guarding isn&#39;t a primitive. We will make a new <code>PrimitiveOrConstructor</code> which is not generic, and then use that type to infer what type it is guarding.</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000"> =</span>
+<span style="color: #000000">  | { </span><span style="color: #0000FF">new</span><span style="color: #000000"> (...</span><span style="color: #001080">args</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">[]): </span><span style="color: #267F99">any</span><span style="color: #000000"> }</span>
+<span style="color: #000000">  | </span><span style="color: #A31515">&#039;string&#039;</span>
+<span style="color: #000000">  | </span><span style="color: #A31515">&#039;number&#039;</span>
+<span style="color: #000000">  | </span><span style="color: #A31515">&#039;boolean&#039;</span><span style="color: #000000">;</span>
+</code></pre>
+								<p>The type of object <code>PrimitiveOrConstructor</code> creates in the non-primitive case is not specified, because it can be inferred when resolving what type is being guarded by it:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">GuardedType</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&gt; = </span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> { </span><span style="color: #0000FF">new</span><span style="color: #000000">(...</span><span style="color: #001080">args</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">[]): </span><span style="color: #0000FF">infer</span><span style="color: #000000"> </span><span style="color: #267F99">U</span><span style="color: #000000">; } ? </span><span style="color: #267F99">U</span><span style="color: #000000"> : </span><span style="color: #267F99">T</span><span style="color: #000000">;</span>
+</code></pre>
+								<p>Now, if the type we want to have a type guard for <code>is aClass</code>, then <code>GuardedType&lt;aClass&gt;</code> resolves to <code>aClass</code>. Otherwise, if we set <code>T as &#39;string&#39;</code> then <code>GuardedType&lt;&#39;string&#39;&gt;</code> is just <code>&#39;string&#39;</code> again, instead of the type <code>string</code>. We still need to be able to map from a string value like <code>&#39;string&#39;</code> to the appropriate type, and to do this we will introduce <code>keyof</code>, and index types. First, we&#39;ll create a mapping from strings to types with a type map:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">interface</span><span style="color: #000000"> </span><span style="color: #267F99">typeMap</span><span style="color: #000000"> { </span><span style="color: #008000">// can also be a type</span>
+<span style="color: #000000">  </span><span style="color: #001080">string</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">number</span><span style="color: #000000">: </span><span style="color: #267F99">number</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">boolean</span><span style="color: #000000">: </span><span style="color: #267F99">boolean</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>Now, we can use <code>keyof typeMap</code> to introduce the <code>&#39;string&#39; | &#39;number&#39; | &#39;boolean&#39;</code> in our <code>PrimitiveOrConstructor</code>, and index into <code>typeMap</code> to get the appropriate type for <code>GuardedType</code> in the primitive case:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000"> =</span>
+<span style="color: #000000">  | { </span><span style="color: #0000FF">new</span><span style="color: #000000"> (...</span><span style="color: #001080">args</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">[]): </span><span style="color: #267F99">any</span><span style="color: #000000"> }</span>
+<span style="color: #000000">  | </span><span style="color: #0000FF">keyof</span><span style="color: #000000"> </span><span style="color: #267F99">typeMap</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">GuardedType</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&gt;</span>
+<span style="color: #000000">  = </span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> { </span><span style="color: #0000FF">new</span><span style="color: #000000">(...</span><span style="color: #001080">args</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">[]): </span><span style="color: #0000FF">infer</span><span style="color: #000000"> </span><span style="color: #267F99">U</span><span style="color: #000000">; }</span>
+<span style="color: #000000">    ? </span><span style="color: #267F99">U</span>
+<span style="color: #000000">    : </span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #0000FF">keyof</span><span style="color: #000000"> </span><span style="color: #267F99">typeMap</span>
+<span style="color: #000000">      ? </span><span style="color: #267F99">typeMap</span><span style="color: #000000">[</span><span style="color: #267F99">T</span><span style="color: #000000">]</span>
+<span style="color: #000000">      : </span><span style="color: #267F99">never</span><span style="color: #000000">;</span>
+</code></pre>
+								<p>A few things to note here:</p>
+								<p><code>keyof</code> is a keyword that takes a type and returns a union of the names of properties of that type. In our case <code>keyof typeMap</code> is exactly what we need: <code>&#39;string&#39; | &#39;number&#39; | &#39;boolean&#39;</code>. This is why the names of <code>typeMap</code>&#39;s properties are the same as their types (i.e the string property has type <code>string</code>, and likewise for <code>number</code> and <code>boolean</code>).</p>
+								<p><code>GuardedType&lt;T&gt;</code> now uses nested ternary ifs: we first check if the type we&#39;re guarding has a constructor (<code>T</code> is the type we&#39;re given that provides the constructor, <code>U</code> is the type actually created by that constructor - they could be the same), then we check if <code>T</code> is one of the primitive types, in which case we use it to index into our <code>typeMap</code> and go from <code>&#39;string&#39;</code> to <code>string</code>.</p>
+								<p>If both of these conditions fail, the type never is used in the last branch because we will never get to it.</p>
+								<p>It would have been simpler to avoid the second if altogether and do this:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">GuardedType</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&gt;</span>
+<span style="color: #000000">  = </span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> { </span><span style="color: #0000FF">new</span><span style="color: #000000">(...</span><span style="color: #001080">args</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">[]): </span><span style="color: #0000FF">infer</span><span style="color: #000000"> </span><span style="color: #267F99">U</span><span style="color: #000000">; }</span>
+<span style="color: #000000">      ? </span><span style="color: #267F99">U</span>
+<span style="color: #000000">      : </span><span style="color: #267F99">typeMap</span><span style="color: #000000">[</span><span style="color: #267F99">T</span><span style="color: #000000">];</span>
+</code></pre>
+								<p>But we get this error: <code>Type &#39;T&#39; cannot be used to index type &#39;typeMap&#39;</code>. In the case where <code>T</code> is not a constructor type, the compiler still doesn&#39;t narrow <code>T</code> down to <code>keyof typeMap</code>, and so tells us that we cannot safely use <code>T</code> as an index of <code>typeMap</code>. We will see this problem again later, it&#39;s an open issue that I feel is worth mentioning. I&#39;ll expand on it in an addendum.</p>
+								<p>Now that we&#39;ve properly defined GuardedType for a given T extends PrimitiveOrConstructor, we can go back to our implementation of typeGuard:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeGuard</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&gt;(</span><span style="color: #001080">o</span><span style="color: #000000">, </span><span style="color: #001080">className</span><span style="color: #000000">: </span><span style="color: #267F99">T</span><span style="color: #000000">):</span>
+<span style="color: #000000">  </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">is</span><span style="color: #000000"> </span><span style="color: #267F99">GuardedType</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt; {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">className</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> === </span><span style="color: #001080">className</span><span style="color: #000000">;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">className</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>Our <code>className</code> parameter is now of type <code>T extends PrimitiveOrConstructor</code>, so <code>GuardedType&lt;T&gt;</code> resolves into the actual type we want to guard for - a class or a primitive type. We&#39;re still not done, though, because we get an error on that last line:</p>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">className</span><span style="color: #000000">; </span><span style="color: #008000">// The right-hand side of an &#039;instanceof&#039; expression must be of type &#039;any&#039; or of a type assignable to the &#039;Function&#039; interface type.</span>
+</code></pre>
+								<p>The issue here is similar to what happened when defining <code>GuardedType</code>. Here, <code>className</code>&#39;s type is <code>T extends PrimitiveOrConstructor</code> throughout the function body, even though we would like it to narrow to <code>&#39;string&#39; | &#39;number&#39; | &#39;boolean&#39;</code> inside the if clause, and to <code>new (...args: any[]) =&gt; any</code> after it. Instead what we have to do is assign <code>className</code> to a local variable with type <code>PrimitiveOrConstructor</code>, and use that variable because its type will be narrowed by the compiler:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeGuard</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&gt;(</span><span style="color: #001080">o</span><span style="color: #000000">, </span><span style="color: #001080">className</span><span style="color: #000000">: </span><span style="color: #267F99">T</span><span style="color: #000000">):</span>
+<span style="color: #000000">  </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">is</span><span style="color: #000000"> </span><span style="color: #267F99">GuardedType</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt; {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// to allow for type narrowing, and therefore type guarding:</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">localPrimitiveOrConstructor</span><span style="color: #000000">: </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000"> = </span><span style="color: #001080">className</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">localPrimitiveOrConstructor</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> === </span><span style="color: #001080">localPrimitiveOrConstructor</span><span style="color: #000000">;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">localPrimitiveOrConstructor</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+</code></pre>
+								<p><br/><br/></p>
+								<h1 id="together">Putting it all together</h1>
+								<p>Whew, that seemed like a lot to get through. Let&#39;s put it all together so we can discern the bigger picture:</p>
+								<pre><code class="language-typescript"><span style="color: #0000FF">interface</span><span style="color: #000000"> </span><span style="color: #267F99">typeMap</span><span style="color: #000000"> { </span><span style="color: #008000">// for mapping from strings to types</span>
+<span style="color: #000000">  </span><span style="color: #001080">string</span><span style="color: #000000">  : </span><span style="color: #267F99">string</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">number</span><span style="color: #000000">  : </span><span style="color: #267F99">number</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">boolean</span><span style="color: #000000"> : </span><span style="color: #267F99">boolean</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000"> = </span><span style="color: #008000">// &#039;string&#039; | &#039;number&#039; | &#039;boolean&#039; | constructor</span>
+<span style="color: #000000">  | { </span><span style="color: #0000FF">new</span><span style="color: #000000"> (...</span><span style="color: #001080">args</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">[]): </span><span style="color: #267F99">any</span><span style="color: #000000"> }</span>
+<span style="color: #000000">  | </span><span style="color: #0000FF">keyof</span><span style="color: #000000"> </span><span style="color: #267F99">typeMap</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// infer the guarded type from a specific case of PrimitiveOrConstructor</span>
+<span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">GuardedType</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&gt; = </span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> { </span><span style="color: #0000FF">new</span><span style="color: #000000">(...</span><span style="color: #001080">args</span><span style="color: #000000">: </span><span style="color: #267F99">any</span><span style="color: #000000">[]): </span><span style="color: #0000FF">infer</span><span style="color: #000000"> </span><span style="color: #267F99">U</span><span style="color: #000000">; } ? </span><span style="color: #267F99">U</span><span style="color: #000000"> : </span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #0000FF">keyof</span><span style="color: #000000"> </span><span style="color: #267F99">typeMap</span><span style="color: #000000"> ? </span><span style="color: #267F99">typeMap</span><span style="color: #000000">[</span><span style="color: #267F99">T</span><span style="color: #000000">] : </span><span style="color: #267F99">never</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// finally, guard ALL the types!</span>
+<span style="color: #0000FF">function</span><span style="color: #000000"> </span><span style="color: #795E26">typeGuard</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000">&gt;(</span><span style="color: #001080">o</span><span style="color: #000000">, </span><span style="color: #001080">className</span><span style="color: #000000">: </span><span style="color: #267F99">T</span><span style="color: #000000">):</span>
+<span style="color: #000000">  </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">is</span><span style="color: #000000"> </span><span style="color: #267F99">GuardedType</span><span style="color: #000000">&lt;</span><span style="color: #267F99">T</span><span style="color: #000000">&gt; {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">localPrimitiveOrConstructor</span><span style="color: #000000">: </span><span style="color: #267F99">PrimitiveOrConstructor</span><span style="color: #000000"> = </span><span style="color: #001080">className</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">localPrimitiveOrConstructor</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">typeof</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> === </span><span style="color: #001080">localPrimitiveOrConstructor</span><span style="color: #000000">;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">o</span><span style="color: #000000"> </span><span style="color: #0000FF">instanceof</span><span style="color: #000000"> </span><span style="color: #267F99">localPrimitiveOrConstructor</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+</code></pre>
+								<p>And to test it out, let&#39;s use the same examples as before, only now the type guarding will actually work and give us <code>string</code>, <code>number</code>, <code>A</code> or <code>B</code> as appropriate:</p>
+								<pre><code><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">A</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">a</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000"> = </span><span style="color: #A31515">&#039;a&#039;</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">B</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">A</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">b</span><span style="color: #000000">: </span><span style="color: #267F99">number</span><span style="color: #000000"> = </span><span style="color: #098658">5</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;number&#039;</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;true&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// typeGuard&lt;&quot;number&quot;&gt;(o: any, className: &quot;number&quot;): o is number</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;false&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// typeGuard&lt;&quot;string&quot;&gt;(o: any, className: &quot;string&quot;): o is string</span>
+
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">A</span><span style="color: #000000">(), </span><span style="color: #0070C1">A</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;true&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// typeGuard&lt;typeof A&gt;(o: any, className: typeof A): o is A</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">B</span><span style="color: #000000">(), </span><span style="color: #0070C1">A</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;true&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">A</span><span style="color: #000000">(), </span><span style="color: #0070C1">B</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;false&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// typeGuard&lt;typeof B&gt;(o: any, className: typeof B): o is B</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">B</span><span style="color: #000000">(), </span><span style="color: #0070C1">B</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;true&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">typeGuard</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">B</span><span style="color: #000000">(), </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;false&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+								<p><br/><br/></p>
+								<h1 id="summary">In summary</h1>
+								<p>Having gone through all of the above, I realize that it would almost always be simpler to test for particular cases with <code>instanceof</code>, for interfaces with user-defined type guards, and for primitives with <code>typeof</code>.</p>
+								<p>I did learn a lot from trying to solve this problem myself, and especially from a StackOverflow answer by user jcalz. This article is mostly going through their answer and explaining the different parts of it. Going through the steps of this implementation involves understanding typescript&#39;s typing system, generics, type guards, useful keywords like <code>keyof</code> and <code>infer</code>, union types, and index types.</p>
+								<p><br/><br/></p>
+								<h2 id="sources">Sources</h2>
+								<ul>
+									<li>StackOverflow answer about trying to call instanceof on a generic type</li>
+									<li>Referencing the constructor of a type in typeScript (generically)</li>
+								</ul>
+								<p><br/><br/></p>
+								<h2 id="addendum">Addendum</h2>
+								<p>When we used <code>T extends PrimitiveOrConstructor</code> in both <code>GuardedType</code> and <code>typeGuard</code>, we saw that conditions about <code>T</code>&#39;s type (e.g extending a constructor vs. extending <code>keyof typeMap</code>) didn&#39;t help the compiler narrow down <code>T</code>&#39;s type, even though we defined <code>PrimitiveOrConstructor</code> to either be a constructor type or a valid property name of <code>typeMap</code>.</p>
+								<p>In the definition of <code>GuardedType</code> the else branch of checking for the case of a constructor type didn&#39;t let us index into <code>typeMap</code>, despite that being the only other option for <code>T</code>. In the implementation of the <code>typeGuard</code> function we tried to do the same in reverse order - we checked for typeof <code>className === &#39;string&#39;</code> which covers the case of <code>T extends keyof typeMap</code>, but outside this clause <code>T</code> was not narrowed down to a constructor type.</p>
+								<p>For defining <code>GuardedType</code>, we had to explicitly write a second ternary if to let the compiler know that <code>T extends keyof typeMap</code> so we could resolve the type as <code>typeMap[T]</code>. For implementing <code>typeGuard</code>, we needed to assign <code>className</code> (with type <code>T extends PrimitiveOrConstructor</code>) to a local variable with type <code>PrimitiveOrConstructor</code>. This variable&#39;s type narrowed as necessary to <code>&#39;string&#39; | &#39;number&#39; | &#39;boolean&#39;</code> inside the <code>if</code> clause, and to <code>new (...args: any[]) =&gt; any</code> after it.</p>
+								<p>The problem in both cases is that <code>T</code> is a generic type which extends the union type <code>PrimitiveOrConstructor</code>. As of now (2019-04-07) this is an open issue. This is luckily also mentioned in jcalz&#39;s StackOverflow answer.</p>
+								<p><br/><br/></p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -187,6 +480,9 @@
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="is_a.html#typeGuard" class="tsd-kind-icon">type<wbr>Guard</a>
 					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="is_a.html#z_tutorial" class="tsd-kind-icon">z_<wbr>tutorial</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -198,6 +494,7 @@
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>

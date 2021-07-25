@@ -1,6 +1,6 @@
 {
   "name": "is_a_ts",
-  "version": "0.10.3",
+  "version": "0.11.0",
   "description": "Typescript implementation of is_a/2 dynamic typeguard by Krumpet, productionalized by StoneCypher",
   "main": "dist/index.cjs.min.js",
   "module": "dist/index.esm.min.js",
