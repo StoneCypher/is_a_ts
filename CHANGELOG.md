@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.9.1...HEAD)
 
+- Add CI, fixes #30 [`#30`](https://github.com/StoneCypher/is_a_ts/issues/30)
+- 100% spec coverage, fixes #33 [`#33`](https://github.com/StoneCypher/is_a_ts/issues/33)
 - Add authors file, fixes #2; downgrade self to contributor, fixes #32; add krumpet to keywords, fixes #4 [`#2`](https://github.com/StoneCypher/is_a_ts/issues/2) [`#32`](https://github.com/StoneCypher/is_a_ts/issues/32) [`#4`](https://github.com/StoneCypher/is_a_ts/issues/4)
 - working jest [`d647648`](https://github.com/StoneCypher/is_a_ts/commit/d6476485b8eb88063592ec7c9c939313699f5fcd)
 - blog claims achieve 100/100/40/100% coverage [`09fd5d6`](https://github.com/StoneCypher/is_a_ts/commit/09fd5d62bc17ff6951270d09f79691f5819ca374)
