@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.9.0...HEAD)
+#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.9.1...HEAD)
+
+#### [v0.9.1](https://github.com/StoneCypher/is_a_ts/compare/v0.9.0...v0.9.1)
+
+> 24 July 2021
+
+- Backdate tags, actual changelog [`5401020`](https://github.com/StoneCypher/is_a_ts/commit/5401020dd03dfc4446f10836fa49ecc7ab04fa4f)
 
 #### [v0.9.0](https://github.com/StoneCypher/is_a_ts/compare/v0.8.0...v0.9.0)
 

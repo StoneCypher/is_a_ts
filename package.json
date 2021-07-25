@@ -1,6 +1,6 @@
 {
   "name": "is_a_ts",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Typescript implementation of is_a/2 dynamic typeguard by Krumpet, productionalized by StoneCypher",
   "main": "dist/index.cjs.min.js",
   "module": "dist/index.esm.min.js",
@@ -30,9 +30,11 @@
     "guard",
     "typescript",
     "ts",
+    "krumpet",
     "stonecypher"
   ],
-  "author": "John Haugeland <stonecypher@gmail.com>",
+  "author": "Krumpet <ran.lottem@mail.huji.ac.il>",
+  "contributors": ["John Haugeland <stonecypher@gmail.com>"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/StoneCypher/is_a_ts/issues"
