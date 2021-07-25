@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file. Dates are d
 #### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.11.0...HEAD)
 
 - Restore coverage.  Fix testing in pipeline; restore node ci version. [`209c7c6`](https://github.com/StoneCypher/is_a_ts/commit/209c7c6b825c9fe0312ee98ce6117728b3ff6ef4)
+- Temporarily disable stochastic tests for CI [`51f5e7c`](https://github.com/StoneCypher/is_a_ts/commit/51f5e7c4095f811a239792918f85afdbc62ffc34)
 - could ... could regressing the node setup version restore coveralls? [`0bfd31d`](https://github.com/StoneCypher/is_a_ts/commit/0bfd31d53ec43610335455eff428e5a6db391ba5)
 
 #### [v0.11.0](https://github.com/StoneCypher/is_a_ts/compare/v0.10.3...v0.11.0)

@@ -1,6 +1,6 @@
 {
   "name": "is_a_ts",
-  "version": "0.11.2",
+  "version": "0.11.4",
   "description": "Typescript implementation of is_a/2 dynamic typeguard by Krumpet, productionalized by StoneCypher",
   "main": "dist/index.cjs.min.js",
   "module": "dist/index.esm.min.js",
@@ -18,7 +18,7 @@
     "site": "cp -r ./src/html/* ./docs && cp ./src/html/.nojekyll ./docs",
     "changelog": "auto-changelog --hide-credit --commit-limit false --unreleased",
     "build": "npm run test && npm run clean && npm run version && npm run typescript && npm run rollup && npm run terser && npm run dist && npm run docs && npm run site && npm run changelog",
-    "test": "jest --color --coverage --verbose && echo jest -c jest-stoch.config.js --color --verbose"
+    "test": "jest --color --coverage --verbose && ls -la coverage && ls -la coverage/spec && echo jest -c jest-stoch.config.js --color --verbose"
   },
   "repository": {
     "type": "git",
