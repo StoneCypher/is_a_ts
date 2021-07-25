@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.10.3...HEAD)
+#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.11.0...HEAD)
+
+#### [v0.11.0](https://github.com/StoneCypher/is_a_ts/compare/v0.10.3...v0.11.0)
+
+> 25 July 2021
+
+- Add original article to documentation as tutorial [`2f07a62`](https://github.com/StoneCypher/is_a_ts/commit/2f07a621a6bb3ca8ab6a2f0a3911bb1f8f5dc369)
 
 #### [v0.10.3](https://github.com/StoneCypher/is_a_ts/compare/v0.10.2...v0.10.3)
 
