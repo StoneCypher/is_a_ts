@@ -1,6 +1,6 @@
 {
   "name": "is_a_ts",
-  "version": "0.11.4",
+  "version": "0.11.5",
   "description": "Typescript implementation of is_a/2 dynamic typeguard by Krumpet, productionalized by StoneCypher",
   "main": "dist/index.cjs.min.js",
   "module": "dist/index.esm.min.js",
@@ -13,12 +13,12 @@
     "terser": "npm run terser_cjs && npm run terser_esm",
     "rollup": "rollup -c",
     "docs": "typedoc --out docs/docs src/ts && cp src/html/.nojekyll docs && cp src/html/.nojekyll docs/docs && cp src/html/.nojekyll docs/docs/assets && cp src/html/.nojekyll docs/docs/modules && cp src/html/.nojekyll docs/docs/classes",
-    "clean": "rimraf -f coverage && rimraf -f docs && mkdir docs && rimraf -f build && mkdir build && cd build && mkdir typescript && mkdir rollup && mkdir terser && cd ../src/ts && rimraf -f generated_code && mkdir generated_code && cd ../..",
+    "clean": "rimraf -f docs && mkdir docs && rimraf -f build && mkdir build && cd build && mkdir typescript && mkdir rollup && mkdir terser && cd ../src/ts && rimraf -f generated_code && mkdir generated_code && cd ../..",
     "dist": "rimraf -f dist && mkdir dist && cp ./build/terser/index.cjs.min.js ./dist && cp ./build/terser/index.esm.min.js ./dist && cp ./build/typescript/index.d.ts ./dist",
     "site": "cp -r ./src/html/* ./docs && cp ./src/html/.nojekyll ./docs",
     "changelog": "auto-changelog --hide-credit --commit-limit false --unreleased",
     "build": "npm run test && npm run clean && npm run version && npm run typescript && npm run rollup && npm run terser && npm run dist && npm run docs && npm run site && npm run changelog",
-    "test": "jest --color --coverage --verbose && ls -la coverage && ls -la coverage/spec && echo jest -c jest-stoch.config.js --color --verbose"
+    "test": "rimraf -f coverage && jest --color --coverage --verbose && ls -la coverage && ls -la coverage/spec && echo jest -c jest-stoch.config.js --color --verbose"
   },
   "repository": {
     "type": "git",
