@@ -1,16 +1,17 @@
 
 interface typeMap { // for mapping from strings to types
-  string  : string;
-  number  : number;
-  boolean : boolean;
+  string: string;
+  number: number;
+  boolean: boolean;
 }
 
 
-
+type Constructor = { new(...args: any[]): any };
+type ConstructedType<T extends Constructor> = T extends { new(...args: any[]): infer U; } ? U : never;
 
 
 type PrimitiveOrConstructor = // 'string' | 'number' | 'boolean' | constructor
-  | { new (...args: any[]): any }
+  | Constructor
   | keyof typeMap;
 
 
@@ -19,11 +20,11 @@ type PrimitiveOrConstructor = // 'string' | 'number' | 'boolean' | constructor
 
 // infer the guarded type from a specific case of PrimitiveOrConstructor
 type GuardedType<T extends PrimitiveOrConstructor> =
-  T extends { new(...args: any[]): infer U; }
-    ? U
-    : T extends keyof typeMap
-      ? typeMap[T]
-      : never;
+  T extends Constructor
+  ? ConstructedType<T>
+  : T extends keyof typeMap
+  ? typeMap[T]
+  : never;
 
 
 
