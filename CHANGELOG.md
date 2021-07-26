@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.11.0...HEAD)
+#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.12.0...HEAD)
 
+- npmignore fixes #29; prerelease [`#29`](https://github.com/StoneCypher/is_a_ts/issues/29)
+
+#### [v0.12.0](https://github.com/StoneCypher/is_a_ts/compare/v0.11.0...v0.12.0)
+
+> 25 July 2021
+
+- npmignore; prerelease [`382097e`](https://github.com/StoneCypher/is_a_ts/commit/382097e63b57e9f8ee022791ee74262676b22c2b)
 - Restore coverage.  Fix testing in pipeline; restore node ci version. [`209c7c6`](https://github.com/StoneCypher/is_a_ts/commit/209c7c6b825c9fe0312ee98ce6117728b3ff6ef4)
 - Clean was running after test, removing coverage after running it instead of before [`ee06876`](https://github.com/StoneCypher/is_a_ts/commit/ee0687689843266d76f49ac58f885fa4c61ec1ad)
 - Temporarily disable stochastic tests for CI [`51f5e7c`](https://github.com/StoneCypher/is_a_ts/commit/51f5e7c4095f811a239792918f85afdbc62ffc34)

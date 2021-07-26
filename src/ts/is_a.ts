@@ -461,5 +461,6 @@ export {
   PrimitiveOrConstructor,
   GuardedType,
   typeGuard,
+  typeGuard as is_a,
   z_tutorial
 };
