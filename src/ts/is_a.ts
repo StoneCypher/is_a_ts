@@ -28,21 +28,24 @@ type GuardedType<T extends PrimitiveOrConstructor> =
       ? typeMap[T]
       : never;
 
-
-
+      
+function typeGuard<T extends Constructor>(o: unknown, className: T): o is ConstructedType<T>;
+function typeGuard<T extends keyof typeMap>(o: unknown, className: T): o is typeMap[T];
 
 
 // finally, guard ALL the types!
-function typeGuard<T extends PrimitiveOrConstructor>(o: unknown, className: T): o is GuardedType<T> {
+function typeGuard(o: unknown, className: PrimitiveOrConstructor) {
 
-  const localPrimitiveOrConstructor: PrimitiveOrConstructor = className;
-
-  if (typeof localPrimitiveOrConstructor === 'string') {
-    return typeof o === localPrimitiveOrConstructor;
+  if (isPrimitiveName(className)) {
+    return typeof o === className;
   }
 
-  return o instanceof localPrimitiveOrConstructor;
+  return o instanceof className;
+}
 
+
+function isPrimitiveName(className: PrimitiveOrConstructor): className is keyof typeMap {
+    return (typeof className === 'string')
 }
 
 
