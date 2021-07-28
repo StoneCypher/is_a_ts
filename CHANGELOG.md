@@ -2,10 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/0.14.1...HEAD)
+#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v1.0.0...HEAD)
+
+### [v1.0.0](https://github.com/StoneCypher/is_a_ts/compare/0.14.1...v1.0.0)
+
+> 28 July 2021
 
 - overloads [`#38`](https://github.com/StoneCypher/is_a_ts/pull/38)
 - type aliases [`#37`](https://github.com/StoneCypher/is_a_ts/pull/37)
+- Declare 1.0.0; improve readme [`0872c6e`](https://github.com/StoneCypher/is_a_ts/commit/0872c6ef086532b24bcf8c7ef1c07773b317fed4)
+- add some readme badges [`7158add`](https://github.com/StoneCypher/is_a_ts/commit/7158add05a01173ec09d016c744b5e07db35db31)
 
 #### [0.14.1](https://github.com/StoneCypher/is_a_ts/compare/v0.12.0...0.14.1)
 
