@@ -111,10 +111,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="GuardedType" class="tsd-anchor"></a>
 					<h3>Guarded<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">Guarded<wbr>Type&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a><span class="tsd-signature-symbol"> ? </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
+					<div class="tsd-signature tsd-kind-icon">Guarded<wbr>Type&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Constructor</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">ConstructedType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a><span class="tsd-signature-symbol"> ? </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/0559b8c/src/ts/is_a.ts#L21">is_a.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/f09e77a/src/ts/is_a.ts#L24">is_a.ts:24</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -127,10 +127,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="PrimitiveOrConstructor" class="tsd-anchor"></a>
 					<h3>Primitive<wbr>OrConstructor</h3>
-					<div class="tsd-signature tsd-kind-icon">Primitive<wbr>OrConstructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a></div>
+					<div class="tsd-signature tsd-kind-icon">Primitive<wbr>OrConstructor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Constructor</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/0559b8c/src/ts/is_a.ts#L12">is_a.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/f09e77a/src/ts/is_a.ts#L15">is_a.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -141,19 +141,20 @@
 					<a name="typeGuard" class="tsd-anchor"></a>
 					<h3>type<wbr>Guard</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">type<wbr>Guard&lt;T&gt;<span class="tsd-signature-symbol">(</span>o<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span>, className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">o</span><span class="tsd-signature-symbol"> is </span><a href="is_a.html#GuardedType" class="tsd-signature-type" data-tsd-kind="Type alias">GuardedType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">type<wbr>Guard&lt;T&gt;<span class="tsd-signature-symbol">(</span>o<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span>, className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">o</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ConstructedType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">type<wbr>Guard&lt;T&gt;<span class="tsd-signature-symbol">(</span>o<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span>, className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">o</span><span class="tsd-signature-symbol"> is </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/0559b8c/src/ts/is_a.ts#L33">is_a.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/f09e77a/src/ts/is_a.ts#L32">is_a.ts:32</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><a href="is_a.html#PrimitiveOrConstructor" class="tsd-signature-type" data-tsd-kind="Type alias">PrimitiveOrConstructor</a></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Constructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -165,7 +166,30 @@
 									<h5>className: <span class="tsd-signature-type">T</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">o</span><span class="tsd-signature-symbol"> is </span><a href="is_a.html#GuardedType" class="tsd-signature-type" data-tsd-kind="Type alias">GuardedType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">o</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ConstructedType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/f09e77a/src/ts/is_a.ts#L33">is_a.ts:33</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>o: <span class="tsd-signature-type">unknown</span></h5>
+								</li>
+								<li>
+									<h5>className: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">o</span><span class="tsd-signature-symbol"> is </span><a href="../interfaces/is_a.typeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">typeMap</a><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -179,7 +203,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/0559b8c/src/ts/is_a.ts#L452">is_a.ts:452</a></li>
+									<li>Defined in <a href="https://github.com/StoneCypher/is_a_ts/blob/f09e77a/src/ts/is_a.ts#L458">is_a.ts:458</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

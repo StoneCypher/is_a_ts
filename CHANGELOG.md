@@ -2,9 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/v0.12.0...HEAD)
+#### [Unreleased](https://github.com/StoneCypher/is_a_ts/compare/0.14.1...HEAD)
+
+- overloads [`#38`](https://github.com/StoneCypher/is_a_ts/pull/38)
+- type aliases [`#37`](https://github.com/StoneCypher/is_a_ts/pull/37)
+
+#### [0.14.1](https://github.com/StoneCypher/is_a_ts/compare/v0.12.0...0.14.1)
+
+> 26 July 2021
 
 - npmignore fixes #29; prerelease [`#29`](https://github.com/StoneCypher/is_a_ts/issues/29)
+- Remove ls debug stubs that were harming Windows users (sloppy).  Add is_a/2 alias. [`0ed4232`](https://github.com/StoneCypher/is_a_ts/commit/0ed4232b7451b9cc81eb0bc18f894e425e40bd40)
 
 #### [v0.12.0](https://github.com/StoneCypher/is_a_ts/compare/v0.11.0...v0.12.0)
 
