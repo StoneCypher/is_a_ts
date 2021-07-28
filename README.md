@@ -3,6 +3,12 @@
 Typescript implementation of
 [generic type guard, by Ran Lottem](https://dev.to/krumpet/generic-type-guard-in-typescript-258l)
 
+[![Node.js CI](https://github.com/StoneCypher/is_a_ts/actions/workflows/node.js.yml/badge.svg)](https://github.com/StoneCypher/is_a_ts/actions/workflows/node.js.yml) [![Coverage Status](https://coveralls.io/repos/github/StoneCypher/is_a_ts/badge.svg?branch=main)](https://coveralls.io/github/StoneCypher/is_a_ts?branch=main)
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/StoneCypher/circular_buffer_js/blob/master/LICENSEs)
+[![NPM Version](https://img.shields.io/npm/v/circular_buffer_js.svg?style=flat)]()
+[![Issues](https://img.shields.io/github/issues-raw/StoneCypher/circular_buffer_js.svg?maxAge=25000)](https://github.com/StoneCypher/circular_buffer_js/issues)
+[![GitHub contributors](https://img.shields.io/github/contributors/StoneCypher/circular_buffer_js.svg?style=flat)]()
 
 
 <br/><br/>
